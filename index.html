@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>இரத்த தான முகாம் வழிமுறைகள்</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #c82333;
+        }
+        .guidelines {
+            text-align: left;
+            padding: 10px;
+        }
+        .guidelines li {
+            margin: 10px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>இரத்த தான முகாம் வழிமுறைகள்</h1>
+        <p>உங்கள் இரத்த தானம் பலரின் உயிரைக் காப்பாற்றும்! தயவுசெய்து கீழ்க்கண்ட வழிமுறைகளை பின்பற்றுங்கள்.</p>
+        <ul class="guidelines">
+            <li>நீங்கள் 18-65 வயதிற்குட்பட்டவராகவும், குறைந்தது 50 கிலோ எடையுடன் இருக்கவும் வேண்டும்.</li>
+            <li>இரத்ததானத்திற்கு முன் ஆரோக்கியமான உணவு உண்பதோடு, பரவலாக நீர் குடிக்கவும்.</li>
+            <li>இரத்ததானத்திற்கு 24 மணி நேரத்திற்கு முன் மது அருந்த வேண்டாம்.</li>
+            <li>கடந்த 3 மாதங்களுக்குள் இரத்த தானம் செய்திருக்கக் கூடாது.</li>
+            <li>உங்களுக்கு உடல்நலம் சரியாக இல்லையெனில், உங்கள் தானத்தை பிற்போக்கவும்.</li>
+            <li>பதிவுக்கு செல்ல செல்லும் போது உங்கள் அடையாள அட்டை கொண்டு வரவும்.</li>
+        </ul>
+
+        <audio id="bgAudio" hidden>
+            <source src="tamil_speech.mp3" type="audio/mp3">
+            உங்கள் உலாவியில் ஆடியோ இயக்கம் ஆதரிக்கப்படவில்லை.
+        </audio>
+
+        <p class="footer">உங்கள் கருணைமிக்க செயல் பலரின் உயிரைக் காப்பாற்றும்! ❤️</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("bgAudio");
+
+            function playAudio() {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }
+
+            // Try playing after user interaction (fixes autoplay block in Chrome/Safari)
+            document.body.addEventListener("click", playAudio, { once: true });
+        });
+    </script>
+</body>
+</html>
